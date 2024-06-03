@@ -14,5 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup('plugins')
 
 vim.opt.expandtab = true
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.shiftwidth = 0
