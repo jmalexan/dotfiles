@@ -9,7 +9,9 @@ return {
   
     config = function()
       require("mason").setup()
-      require("mason-lspconfig").setup()
+      require("mason-lspconfig").setup {
+        automatic_installation = true
+      }
   
       require'lspconfig'.jedi_language_server.setup{}
       require'lspconfig'.gopls.setup{}
