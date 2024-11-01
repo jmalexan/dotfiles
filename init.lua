@@ -17,5 +17,6 @@ vim.opt.shiftwidth = 0
 vim.opt.termguicolors = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.number = true
 
 require("lazy").setup("plugins")
