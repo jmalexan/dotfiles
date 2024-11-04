@@ -6,28 +6,49 @@ return {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = function()
-			require("nvim-tree").setup({})
-		end,
+		opts = {
+			renderer = {
+				indent_markers = {
+					enable = true,
+				},
+				icons = {
+					git_placement = "right_align",
+					glyphs = {
+						git = {
+							unstaged = "U",
+							staged = "S",
+							unmerged = "!",
+							untracked = "N",
+						},
+					},
+				},
+			},
+		},
 	},
 	{
 		"akinsho/bufferline.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = function()
-			require("bufferline").setup({
-				options = {
-					offsets = {
-						{
-							filetype = "NvimTree",
-							text = "File Explorer",
-							text_align = "left",
-							separator = true,
-						},
+		opts = {
+			options = {
+				offsets = {
+					{
+						filetype = "NvimTree",
+						separator = true,
 					},
 				},
-			})
-		end,
+			},
+		},
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			options = {
+				theme = "onedark",
+				disabled_filetypes = { "NvimTree" },
+			},
+		},
 	},
 }

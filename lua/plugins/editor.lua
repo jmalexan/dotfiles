@@ -2,9 +2,7 @@ return {
 	"echasnovski/mini.pairs",
 	{
 		"m4xshen/autoclose.nvim",
-		config = function()
-			require("autoclose").setup({})
-		end,
+		opts = {},
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -18,13 +16,6 @@ return {
 				highlight = { enable = true },
 				indent = { enable = true },
 			})
-		end,
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("lualine").setup()
 		end,
 	},
 }
