@@ -7,6 +7,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		opts = {
+			hijack_cursor = true,
 			renderer = {
 				indent_markers = {
 					enable = true,
