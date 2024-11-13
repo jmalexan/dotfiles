@@ -1,7 +1,32 @@
 return {
-	"echasnovski/mini.pairs",
 	{
-		"m4xshen/autoclose.nvim",
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {},
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			current_line_blame = true,
+		},
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {},
+		keys = {
+			{
+				"<leader>?",
+				function()
+					require("which-key").show({ global = false })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
+			},
+		},
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
 		opts = {},
 	},
 	{
@@ -17,5 +42,12 @@ return {
 				indent = { enable = true },
 			})
 		end,
+	},
+	{
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
 	},
 }

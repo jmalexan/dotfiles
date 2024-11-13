@@ -19,4 +19,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.number = true
 
+vim.g.mapleader = " "
+
 require("lazy").setup("plugins")
