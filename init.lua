@@ -20,5 +20,6 @@ vim.opt.splitright = true
 vim.opt.number = true
 
 vim.g.mapleader = " "
+vim.opt.clipboard = "unnamedplus"
 
 require("lazy").setup("plugins")

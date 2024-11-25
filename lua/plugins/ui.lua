@@ -41,10 +41,10 @@ return {
 			require("telescope").setup(opts)
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>o", builtin.find_files, { desc = "Telescope find files" })
-			vim.keymap.set("n", "<leader>f", builtin.live_grep, { desc = "Telescope live grep" })
-			vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Telescope buffers" })
-			vim.keymap.set("n", "<leader>h", builtin.help_tags, { desc = "Telescope help tags" })
+			vim.keymap.set("n", "<leader>to", builtin.find_files, { desc = "Telescope find files" })
+			vim.keymap.set("n", "<leader>tf", builtin.live_grep, { desc = "Telescope live grep" })
+			vim.keymap.set("n", "<leader>tb", builtin.buffers, { desc = "Telescope buffers" })
+			vim.keymap.set("n", "<leader>th", builtin.help_tags, { desc = "Telescope help tags" })
 
 			local find_files_hijack_netrw = vim.api.nvim_create_augroup("find_files_hijack_netrw", { clear = true })
 			-- clear FileExplorer appropriately to prevent netrw from launching on folders
@@ -84,16 +84,31 @@ return {
 			-- your configuration comes here
 			-- or leave it empty to use the default settings
 		},
+		keys = {
+			{
+				"<leader>d",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+		},
 	},
 	{
 		"stevearc/oil.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
 		---@module 'oil'
 		---@type oil.SetupOpts
 		opts = {
 			default_file_explorer = false,
+			view_options = {
+				show_hidden = true,
+			},
 		},
-		-- Optional dependencies
-		dependencies = { { "echasnovski/mini.icons", opts = {} } },
-		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if prefer nvim-web-devicons
+		keys = {
+			{
+				"<leader>f",
+				"<cmd>Oil<cr>",
+				desc = "Oil",
+			},
+		},
 	},
 }
