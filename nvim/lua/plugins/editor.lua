@@ -60,4 +60,7 @@ return {
 			},
 		},
 	},
+	{
+		"Exafunction/windsurf.vim",
+	},
 }

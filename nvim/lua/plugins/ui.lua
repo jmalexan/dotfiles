@@ -45,6 +45,7 @@ return {
 			vim.keymap.set("n", "<leader>tf", builtin.live_grep, { desc = "Telescope live grep" })
 			vim.keymap.set("n", "<leader>tb", builtin.buffers, { desc = "Telescope buffers" })
 			vim.keymap.set("n", "<leader>th", builtin.help_tags, { desc = "Telescope help tags" })
+			vim.keymap.set("n", "<leader>tr", builtin.lsp_references, { desc = "Telescope lsp references" })
 
 			local find_files_hijack_netrw = vim.api.nvim_create_augroup("find_files_hijack_netrw", { clear = true })
 			-- clear FileExplorer appropriately to prevent netrw from launching on folders
