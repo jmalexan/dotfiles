@@ -1,1 +1,5 @@
 .DS_Store
+
+/fish/completions/*.fish
+/fish/fish_variables
+/fish/config.fish.backup
