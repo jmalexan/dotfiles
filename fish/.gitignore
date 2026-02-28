@@ -2,3 +2,4 @@ completions/*.fish
 fish_variables
 config.fish.backup
 functions/
+conf.d/
