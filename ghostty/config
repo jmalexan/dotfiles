@@ -2,3 +2,4 @@ font-family = "Iosevka Extended"
 font-size = 15
 theme = "light:One Half Light,dark:One Half Dark"
 adjust-cursor-thickness = 200%
+shell-integration-features = ssh-env
